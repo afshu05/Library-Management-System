@@ -1,55 +1,91 @@
 📚 Library Management System
 
-A beginner-friendly console-based application developed using Python and SQLite to manage library operations such as book management, member handling, and borrow/return processes.
+  A beginner-friendly Python + SQLite project for managing books, members, and borrow/return operations.
 
-The Library Management System helps automate basic library tasks and supports both Admin and User roles. It allows managing books (add, update, delete, view), user registration and login, borrowing and returning of books with fine calculation, and maintaining borrowing records. The project uses Python for application logic, SQLite for database management, and Tabulate for displaying data in a clean tabular format.
+🚀 Project Overview
 
+  The Library Management System is a console-based Python application designed to help manage:
+  
+  Books (Add / Update / Delete / View)
+  
+  Members (Registration / Login)
+  
+  Borrow and Return of books
+  
+  Fine calculation
+  
+  Admin and User roles
+  
+  It uses SQLite database, Python, and Tabulate for clean table outputs.
+  
 ⚙️ How to Run the Project
+1️⃣ Install Python
 
-1️⃣ Install Python  
-Download and install Python from: https://www.python.org/downloads/
+Download from: https://www.python.org/downloads/
 
-2️⃣ Install Required Library  
-Open terminal or command prompt and run:
+2️⃣ Install Required Library
+
+Open terminal / command prompt and run:
+
 pip install tabulate
 
-3️⃣ Open the Project Folder  
-Navigate to the folder containing the project files.
+3️⃣ Open the Project Folder
 
-4️⃣ Run the Program  
+Navigate to the folder where your .py file is saved.
+
+4️⃣ Run the Program
 python Library_Management_System.py
 
-🔐 Admin Login Setup
+5️⃣ First Login (Admin)
 
-Initially, the database will be empty. To access Admin functionality, an admin record must be inserted manually using the following SQL query:
+Your database will start empty.
+
+To use Admin mode, manually insert an admin record:
 
 INSERT INTO Members(member_name, username, password, contact, email, role, join_date)
 VALUES('Admin', 'admin', 'admin123', '9999999999', 'admin@gmail.com', 'admin', '2025-01-01');
 
-This query can be executed using DB Browser for SQLite, SQLite command line, or a Python database cursor.
+
+You can run this using DB Browser or Python shell.
 
 👤 User Features
 
-✔ Register and login  
-✔ View all available books  
-✔ Search books by title, author, or genre  
-✔ Borrow books  
-✔ Return books with fine calculation  
-✔ View borrowed books  
-✔ View and update user profile  
+✔ Register & Login
+✔ View all books
+✔ Search books by:
+
+1.Title    2.Author  3.Genre
+
+✔ Borrow a book
+✔ Return a book with fine calculation
+✔ View borrowed books
+✔ Update profile
+✔ View profile
 
 👑 Admin Features
 
-✔ Add new books  
-✔ Update book details  
-✔ Delete books (only if not currently borrowed)  
-✔ View all books  
-✔ View all registered members  
-✔ View borrowed book records  
-✔ Track members who have borrowed specific books and not returned them  
-
+✔ Add new books
+✔ Update book details
+✔ Delete book (only if not borrowed)
+✔ View all books
+✔ View all members
+✔ View all borrowed books
+✔ View members who borrowed a specific book (not returned yet)
 📦 Database Tables
+Author, Genre, Books, Members, Borrow
 
-The application uses the following database tables: Author, Genre, Books, Members, and Borrow. Foreign key constraints are implemented to maintain relationships between authors, genres, books, members, and borrowing details.
+Each table uses foreign keys for linking authors, genres, members, and borrowing details.
 
-🧪 Validations Implemented ✔ Name: alphabets only ✔ Username: must be unique ✔ Contact number: 10 digits (Regex) ✔ Email format validation ✔ Borrow quantity based on availability ✔ Prevent deleting books that are borrowed i want this is same only anpother version
+🧪 Validations Implemented
+
+✔ Name: alphabets only
+
+✔ Username: must be unique
+
+✔ Contact number: 10 digits (Regex)
+
+✔ Email format validation
+
+✔ Borrow quantity based on availability
+
+✔ Prevent deleting books that are borrowed
